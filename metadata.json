@@ -1,0 +1,5 @@
+{
+  "name": "Wiki Weaver",
+  "description": "An intelligent web app that uses the Gemini API to automatically categorize a list of URLs into a beautifully structured Markdown document, turning messy links into an organized knowledge base.",
+  "requestFramePermissions": []
+}
