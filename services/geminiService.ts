@@ -50,8 +50,11 @@ Pass strict validation checks for the "llms.txt" format while providing high-qua
 `;
 
 export const generateMarkdownFromUrls = async (urls: string): Promise<string> => {
-  // Hardcoded API key as requested for demo purposes
-  const apiKey = 'AIzaSyB9ggW4yi6hb_EqXtU_7Axo0G5ZngLIJnU';
+  const apiKey = process.env.GEMINI_API_KEY;
+
+  if (!apiKey) {
+    throw new Error("GEMINI_API_KEY environment variable is not set");
+  }
   
   const ai = new GoogleGenAI({ apiKey });
 
